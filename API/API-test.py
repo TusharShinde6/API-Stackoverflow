@@ -118,7 +118,7 @@ def test_fetch_badges(endpoint, params, expected_status_code):
     print(f"{params}")
 
     assert response.status_code == expected_status_code
-throttle_violation
+
     if response.status_code == 200:
         items = response.json().get('items', [])
         assert items, f"No items found in the response for {endpoint}"
